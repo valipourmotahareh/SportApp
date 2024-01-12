@@ -15,7 +15,7 @@ interface SportDao {
     @Query("SELECT * FROM SportEntity WHERE id=:id")
     suspend fun getSportById(id: Int): SportEntity
 
-    @Query("SELECT * FROM SportEntity WHERE recommended=true")
+    @Query("SELECT * FROM SportEntity WHERE recommended=1")
     suspend fun getSportListRecommended(): List<SportEntity>
 
     @Query("SELECT * FROM SportEntity WHERE is_free=1")
